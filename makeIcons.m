@@ -8,7 +8,7 @@ imgSize = size(img,1:2);
 
 
 % Create string array of releases
-T = combinations(23:30,["a","b"]);
+T = combinations(16:26,["a","b"]);
 txtrelease = join(T{:,:},''); % Covert table into text and join
 
 txtPosition = round(imgSize.*[0.55, 0.5]);

@@ -60,7 +60,7 @@ for L = 1:length(Shortcuts)
 end
 
 if flag == 1
-    for Count = 1:Win_c    
+    for Count = 1:length(version_new_window)    
         New_Icon = fullfile(pwd, 'matlab.icons',version_new_window(Count));
         % Create a COM server for the Windows Script Host Shell
         shell = actxserver('WScript.Shell');

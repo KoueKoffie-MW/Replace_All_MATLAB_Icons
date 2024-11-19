@@ -1,0 +1,64 @@
+[1118/172705.747:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[1118/172705.747:INFO:client_app.cpp(490)] In ClientApp::OnBeforeChildProcessLaunch
+[1118/172705.748:INFO:client_app.cpp(496)] Not appending enable-binary-transport
+[1118/172706.634:INFO:native_window_win.cpp(129)] Created window 0000021E88DA0C90
+[1118/172706.640:INFO:native_window_win.cpp(225)]  CreateBrowser: Creating renderer process 
+[1118/172706.641:INFO:native_window_win.cpp(478)] Sending focus event from WM_SHOWWINDOW for window 0000021E88DA0C90
+[1118/172706.652:INFO:native_window_win.cpp(375)] Sending focus event from WM_ACTIVATE for window 0000021E88DA0C90
+[1118/172706.688:INFO:client_app.cpp(490)] In ClientApp::OnBeforeChildProcessLaunch
+[1118/172706.692:INFO:client_app.cpp(496)] Not appending enable-binary-transport
+[1118/172706.719:INFO:WindowEventHandler.cpp(706)] Sending queued process message
+[1118/172706.719:INFO:WindowEventHandler.cpp(706)] Sending queued process message
+[1118/172706.720:INFO:WindowEventHandler.cpp(706)] Sending queued process message
+[1118/172706.720:INFO:WindowEventHandler.cpp(706)] Sending queued process message
+[1118/172706.721:INFO:client_app.cpp(490)] In ClientApp::OnBeforeChildProcessLaunch
+[1118/172706.721:INFO:client_app.cpp(496)] Not appending enable-binary-transport
+[1118/172706.721:INFO:client_app.cpp(490)] In ClientApp::OnBeforeChildProcessLaunch
+[1118/172706.721:INFO:client_app.cpp(496)] Not appending enable-binary-transport
+[1118/172707.858:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'browsing-topics'.", source:  (0)
+[1118/172707.860:INFO:native_window.cpp(574)] Sending zoom information
+[1118/172707.860:INFO:native_window.cpp(592)] Sending origin information
+[1118/172707.861:INFO:client_handler.cpp(670)]  Sending Exchange URI 
+[1118/172707.861:INFO:client_handler.cpp(680)] OnLoadStart for frame: 17179869185 isMain: 1 URL: https://www.mathworks.com/
+[1118/172707.867:INFO:NativeWindowProcessMessageHandler.cpp(890)] In native_window::handleSetWindowID, found windowID = 2624230993153833091
+[1118/172707.867:INFO:native_window.cpp(1455)] Setting the window ID to 2624230993153833091
+[1118/172707.869:INFO:client_app.cpp(957)] transport is not enabled, so not setting initializing it
+[1118/172709.063:INFO:client_handler.cpp(680)] OnLoadStart for frame: 17179869188 isMain: 0 URL: about:blank
+[1118/172709.072:INFO:client_handler.cpp(736)] OnLoadEnd for frame: 17179869188 isMain: 0 URL: about:blank
+[1118/172710.469:INFO:CONSOLE(2)] "TypeError: window.__gpp is not a function", source: https://cmp.inmobi.com/tcfv2/cmp2.js?referer=mathworks.com (2)
+[1118/172710.569:INFO:CONSOLE(2)] "uspData set usp out of jurisiction value", source: https://cmp.inmobi.com/tcfv2/cmp2.js?referer=mathworks.com (2)
+[1118/172710.577:INFO:CONSOLE(2)] "Visit event sent successfully.", source: https://cmp.inmobi.com/tcfv2/cmp2.js?referer=mathworks.com (2)
+[1118/172711.054:INFO:client_app.cpp(490)] In ClientApp::OnBeforeChildProcessLaunch
+[1118/172711.054:INFO:client_app.cpp(496)] Not appending enable-binary-transport
+[1118/172711.060:WARNING:browser_info.cc(309)] Returning a speculative frame for 21474836486 [5,6]
+[1118/172711.109:WARNING:browser_info.cc(309)] Returning a speculative frame for 21474836486 [5,6]
+[1118/172711.109:WARNING:browser_info.cc(309)] Returning a speculative frame for 21474836486 [5,6]
+[1118/172711.109:WARNING:browser_info.cc(309)] Returning a speculative frame for 21474836486 [5,6]
+[1118/172711.109:WARNING:browser_info.cc(309)] Returning a speculative frame for 21474836486 [5,6]
+[1118/172711.112:INFO:client_handler.cpp(680)] OnLoadStart for frame: 21474836486 isMain: 0 URL: https://www.recaptcha.net/recaptcha/enterprise/anchor?ar=1&k=6Lc7vGMbAAAAAClHjBQhM1emcXDj9GtwMi9HKbgZ&co=aHR0cHM6Ly93d3cubWF0aHdvcmtzLmNvbTo0NDM.&hl=en&v=-ZG7BC9TxCVEbzIO2m429usb&size=invisible&cb=nlhi42aro2xd
+[1118/172711.311:INFO:client_handler.cpp(680)] OnLoadStart for frame: 17179869191 isMain: 0 URL: about:blank
+[1118/172711.322:INFO:client_handler.cpp(736)] OnLoadEnd for frame: 17179869191 isMain: 0 URL: about:blank
+[1118/172711.596:INFO:client_handler.cpp(680)] OnLoadStart for frame: 21474836490 isMain: 0 URL: about:blank
+[1118/172711.600:INFO:client_handler.cpp(736)] OnLoadEnd for frame: 21474836490 isMain: 0 URL: about:blank
+[1118/172711.740:INFO:client_handler.cpp(736)] OnLoadEnd for frame: 21474836486 isMain: 0 URL: https://www.recaptcha.net/recaptcha/enterprise/anchor?ar=1&k=6Lc7vGMbAAAAAClHjBQhM1emcXDj9GtwMi9HKbgZ&co=aHR0cHM6Ly93d3cubWF0aHdvcmtzLmNvbTo0NDM.&hl=en&v=-ZG7BC9TxCVEbzIO2m429usb&size=invisible&cb=nlhi42aro2xd
+[1118/172711.750:INFO:client_app.cpp(490)] In ClientApp::OnBeforeChildProcessLaunch
+[1118/172711.750:INFO:client_app.cpp(496)] Not appending enable-binary-transport
+[1118/172711.755:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803785 [6,9]
+[1118/172711.893:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803785 [6,9]
+[1118/172711.893:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803785 [6,9]
+[1118/172711.893:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803785 [6,9]
+[1118/172711.893:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803785 [6,9]
+[1118/172711.896:INFO:client_handler.cpp(680)] OnLoadStart for frame: 25769803785 isMain: 0 URL: https://dntcl.qualaroo.com/frame.html
+[1118/172711.904:INFO:client_handler.cpp(736)] OnLoadEnd for frame: 25769803785 isMain: 0 URL: https://dntcl.qualaroo.com/frame.html
+[1118/172711.904:INFO:client_handler.cpp(736)] OnLoadEnd for frame: 17179869185 isMain: 1 URL: https://www.mathworks.com/
+[1118/172713.091:INFO:CONSOLE(290)] "Unrecognized feature: 'attribution-reporting'.", source: https://connect.facebook.net/en_US/fbevents.js (290)
+[1118/172727.313:INFO:client_handler.cpp(619)] OnBeforeClose: 1
+[1118/172727.313:INFO:matlab_interface.cpp(197)] In matlab_interface::notifyWindowClose :371c02d9-6b83-4427-bc27-ca3bc5f226f1
+[1118/172727.313:INFO:matlab_interface.cpp(208)] Sending the close pipes command
+[1118/172727.313:INFO:matlab_interface.cpp(232)] Leaving matlab_interface::notifyWindowClose
+[1118/172727.347:INFO:client_app.cpp(1185)] Terminating transport...
+[1118/172727.347:INFO:client_app.cpp(1186)] Is Transport Initialized? 0
+[1118/172727.347:INFO:client_app.cpp(1188)] Transport not intialized. No need to terminate.
+[1118/172727.400:INFO:client_app.cpp(1185)] Terminating transport...
+[1118/172727.401:INFO:client_app.cpp(1186)] Is Transport Initialized? 0
+[1118/172727.401:INFO:client_app.cpp(1188)] Transport not intialized. No need to terminate.

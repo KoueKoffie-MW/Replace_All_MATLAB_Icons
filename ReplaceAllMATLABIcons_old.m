@@ -18,7 +18,7 @@ function fileList = findMATLABShortcuts()
     
 
     % Define the search pattern
-    searchPattern = 'MATLAB ?????*.lnk';
+    searchPattern = 'MATLAB ??????.lnk';
 
     % Find all matching files
     fileList_1 = searchFilesRecursively(rootDir_1, searchPattern);
@@ -63,16 +63,7 @@ Shortcuts = findMATLABShortcuts();
 
 for L = 1:length(Shortcuts)
     version_n = char(Shortcuts(L));
- 
-    % Regular expression pattern to match "MATLAB R20" followed by three characters
-    pattern = 'MATLAB R20(\w{3})';
-    % Extract the three characters after "MATLAB R20"
-    version_new = regexp(Shortcuts(L), pattern, 'tokens');
-    version_new =  (version_new{end});
-    version_new =  (version_new{end});
-    version_new =  char(version_new{end,end});
-    
-    % version_new = version_n(end-6:end-4);
+ version_new = version_n(end-6:end-4);
  version_new = strjoin(["matlab_", version_new, ".ico" ],'');
 
  New_Icon = fullfile(pwd, 'matlab.icons',version_new);
@@ -82,13 +73,7 @@ for L = 1:length(Shortcuts)
     
     % Load the shortcut
     shortcut = shell.CreateShortcut(version_n);
-
-    % Get the target path of the shortcut
-    targetPath = shortcut.TargetPath;
-    if contains(targetPath,'MATLABwindow')
-      
-        % shortcut.TargetPath = 
-    end 
+    
     % Change the icon
     shortcut.IconLocation = New_Icon;
     

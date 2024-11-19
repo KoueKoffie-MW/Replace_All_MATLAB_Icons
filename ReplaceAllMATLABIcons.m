@@ -6,64 +6,22 @@
             disp('MATLAB is running with administrative privileges. The script will continue');
         end
 
-function fileList = findMATLABShortcuts()
-    
-    [~, username] = system('echo %USERNAME%'); 
-    username = strtrim(username);
-    % Define the root directory to search
-    rootDir_1 = ('C:\ProgramData\Microsoft\Windows\Start Menu\Programs\');
-    rootDir_2 = ('C:\Users\Public\Desktop');
-    rootDir_3 = char("C:\Users\" + username + "\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned");
-
-    
-
-    % Define the search pattern
-    searchPattern = 'MATLAB ??????.lnk';
-
-    % Find all matching files
-    fileList_1 = searchFilesRecursively(rootDir_1, searchPattern);
-    fileList_2 = searchFilesRecursively(rootDir_2, searchPattern);
-    fileList_3 = searchFilesRecursively(rootDir_3, searchPattern);
-
-    fileList = [fileList_1 fileList_2 fileList_3];
-
-    % Display the results
-    if isempty(fileList)
-        disp('No matching files found.');
-    else
-        disp('Matching files:');
-        disp(fileList);
-    end
-end
-
-function fileList = searchFilesRecursively(directory, pattern)
-    % Initialize an empty cell array to store file paths
-    fileList = {};
-
-    % Search for files matching the pattern in the current directory
-    files = dir(fullfile(directory, pattern));
-    for k = 1:length(files)
-        fileList{end+1} = fullfile(directory, files(k).name); %#ok<AGROW>
-    end
-
-    % Get a list of all subdirectories
-    subDirs = dir(directory);
-    for k = 1:length(subDirs)
-        % Skip '.' and '..'
-        if subDirs(k).isdir && ~strcmp(subDirs(k).name, '.') && ~strcmp(subDirs(k).name, '..')
-            % Recursively search each subdirectory
-            subDirPath = fullfile(directory, subDirs(k).name);
-            fileList = [fileList, searchFilesRecursively(subDirPath, pattern)]; %#ok<AGROW>
-        end
-    end
-end
-
 % Run the function
 Shortcuts = findMATLABShortcuts();
-
+flag = 0;
+Win_c = 1;
 for L = 1:length(Shortcuts)
     version_n = char(Shortcuts(L));
- version_new = version_n(end-6:end-4);
+ 
+    % Regular expression pattern to match "MATLAB R20" followed by three characters
+    pattern = 'MATLAB R20(\w{3})';
+    % Extract the three characters after "MATLAB R20"
+    version_new = regexp(Shortcuts(L), pattern, 'tokens');
+    version_new =  (version_new{end});
+    version_new =  (version_new{end});
+    version_new =  char(version_new{end,end});
+    
+    % version_new = version_n(end-6:end-4);
  version_new = strjoin(["matlab_", version_new, ".ico" ],'');
 
  New_Icon = fullfile(pwd, 'matlab.icons',version_new);
@@ -73,7 +31,24 @@ for L = 1:length(Shortcuts)
     
     % Load the shortcut
     shortcut = shell.CreateShortcut(version_n);
-    
+
+    % Get the target path of the shortcut
+    targetPath = shortcut.TargetPath;
+    if contains(targetPath,'MATLABWindow','IgnoreCase',1)
+      disp('You have a shortcut pinned that uses the New Desktop - this may cause issues with the icons')
+        % 
+        NewShort = insertBefore(Shortcuts(L),'.lnk','Window');
+        NewShort = NewShort{1};
+        OldShort = Shortcuts(L);
+        OldShort = OldShort{1};
+        copyfile(string(OldShort),string(NewShort))
+        shortcut.TargetPath = erase(targetPath,'Window');
+        flag = 1;
+        version_new_window(Win_c) = version_new;
+        version_n_window(Win_c) = string(version_n);
+        Win_c = Win_c+1;
+
+    end 
     % Change the icon
     shortcut.IconLocation = New_Icon;
     
@@ -82,6 +57,29 @@ for L = 1:length(Shortcuts)
     
     % Clean up
     delete(shell);
+end
+
+if flag == 1
+    for Count = 1:Win_c    
+        New_Icon = fullfile(pwd, 'matlab.icons',version_new_window(Count));
+        % Create a COM server for the Windows Script Host Shell
+        shell = actxserver('WScript.Shell');
+        
+        % Load the shortcut
+        shortcut = shell.CreateShortcut(version_n_window(Count));
+    
+        % Get the target path of the shortcut
+        targetPath = shortcut.TargetPath;  
+    
+        % Change the icon
+        shortcut.IconLocation = New_Icon;
+        
+        % Save the changes
+        shortcut.Save();
+        
+        % Clean up
+        delete(shell);
+    end
 end
 
 

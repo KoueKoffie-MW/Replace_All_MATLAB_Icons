@@ -80,5 +80,7 @@ if flag == 1
     end
 end
 clear
-
+cd Fix_Startup_Location\
+Fix_startupLocation
+cd ..\
 

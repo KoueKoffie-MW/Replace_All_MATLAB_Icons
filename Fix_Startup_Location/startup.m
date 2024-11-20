@@ -1,15 +1,18 @@
 function startup()
+    % Determine the MATLAB version
+    matlabVersion = version('-release');
+    
     % Define the path to the file where the directory was saved
     userDir = userpath;
     if userDir(end) == ';'
         userDir(end) = [];
     end
-    saveFilePath = fullfile(userDir, 'lastDir.mat');
+    loadFilePath = fullfile(userDir, ['lastDir_' matlabVersion '.mat']);
     
     % Check if the file exists
-    if isfile(saveFilePath)
+    if isfile(loadFilePath)
         % Load the last directory
-        load(saveFilePath, 'currentDir');
+        load(loadFilePath, 'currentDir');
         
         % Change to the last directory
         if isfolder(currentDir)

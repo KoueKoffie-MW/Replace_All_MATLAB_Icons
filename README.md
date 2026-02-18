@@ -10,7 +10,8 @@ It allows you to have multiple releases as shortcuts or pinned to the taskbar an
 3. Open Any version of MATLAB with Administrator rights, 
 4. Open the ReplaceAllMATLABIcons.m file and run it. 
 5. Close MATLAB. 
-6. Re-open MATLAB and you should see the new icon! (Note: For New Desktop Running Versions the Icons won't be stacked)
+6. Re-open MATLAB 
+7. Unpin and repin the MATLAB Icon and you should see the new icon! (Note: For New Desktop Running Versions the Icons won't be stacked)
 
 If you move these files after associating it with MATLAB as the new icon, it will no longer be associated and display.
 

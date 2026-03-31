@@ -1,4 +1,6 @@
-function startup()
+execute_startup_tasks();
+
+function execute_startup_tasks()
     % Determine the MATLAB version
     matlabVersion = version('-release');
     

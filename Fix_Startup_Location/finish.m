@@ -1,4 +1,6 @@
-function finish()
+execute_finish_tasks();
+
+function execute_finish_tasks()
     % Get the current directory
     currentDir = pwd;
     
